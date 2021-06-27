@@ -31,6 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Smart grocery"),
         ),
-        body: Center());
+        body: Center(
+          child: Text("check"),
+        ));
   }
 }
