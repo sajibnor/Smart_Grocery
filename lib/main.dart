@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("check2"),
             ),
             Center(
-              child: Text("I have to test this"),
+              child: Text("I have to test this chage"),
             )
           ],
         ));
