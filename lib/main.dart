@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text("Smart grocery 2"),
         ),
         body: Center(
-          child: Text("check"),
+          child: Text("check2"),
         ));
   }
 }
