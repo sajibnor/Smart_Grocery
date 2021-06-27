@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './screens/allCategories.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Smart Grocery',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -27,6 +30,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.white.withOpacity(.5),
+      statusBarBrightness: Brightness.dark,
+    ));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+    ));
+    // SystemChrome.setEnabledSystemUIOverlays([]);
+
     return Scaffold(
         appBar: AppBar(
           title: Text("Smart grocery 2"),
@@ -37,8 +49,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("check2"),
             ),
             Center(
-              child: Text("I have to test this chage sajib"),
-            )
+                child: BackButton(
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Cetagoris())),
+            ))
           ],
         ));
   }
