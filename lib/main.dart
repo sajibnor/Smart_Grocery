@@ -1,3 +1,4 @@
+import 'package:Smart_Grocery/sreen/drawer.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,37 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Smart Grocery',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: Homepage(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("Smart grocery 2"),
-        ),
-        body: Column(
-          children: [
-            Center(
-              child: Text("check2"),
-            ),
-            Center(
-              child: Text("I have to test this chage sajib"),
-            )
-          ],
-        ));
   }
 }
