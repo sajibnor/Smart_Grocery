@@ -53,53 +53,14 @@ class Cetagoris extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.white.withOpacity(.5),
+      statusBarColor: Colors.white.withOpacity(.2),
       statusBarBrightness: Brightness.dark,
     ));
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ));
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Cetagories",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 17,
-          ),
-        ),
-        // brightness: Brightness.dark,
-
-        // toolbarOpacity: 0.7,
-        centerTitle: true,
-        titleSpacing: 50,
-        toolbarHeight: 60,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(30),
-          bottomLeft: Radius.circular(30),
-        )),
-        elevation: 0,
-
-        leading: IconButton(
-            icon: Icon(Icons.menu, color: IconTheme.of(context).color),
-            onPressed: null),
-        backgroundColor: Color(0xffffffff),
-        actions: [
-          IconButton(
-              icon: Icon(
-                Icons.category,
-                color: Colors.green,
-              ),
-              onPressed: null),
-          IconButton(
-              icon: Icon(
-                Icons.shopping_cart,
-                color: Colors.green,
-              ),
-              onPressed: null),
-        ],
-      ),
+      appBar: buildAppBar(context),
       backgroundColor: Color(0xffffffff),
       body: Container(
         child: GridView.count(
@@ -137,6 +98,49 @@ class Cetagoris extends StatelessWidget {
         //       return Item("url", itemname);
         //     }).toList()),
       ),
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      title: Text(
+        "Cetagories",
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 17,
+        ),
+      ),
+      // brightness: Brightness.dark,
+
+      // toolbarOpacity: 0.7,
+      centerTitle: true,
+      titleSpacing: 50,
+      toolbarHeight: 60,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+        bottomRight: Radius.circular(30),
+        bottomLeft: Radius.circular(30),
+      )),
+      elevation: 0,
+
+      leading: IconButton(
+          icon: Icon(Icons.menu, color: IconTheme.of(context).color),
+          onPressed: null),
+      backgroundColor: Color(0xffffffff),
+      actions: [
+        IconButton(
+            icon: Icon(
+              Icons.category,
+              color: Colors.green,
+            ),
+            onPressed: null),
+        IconButton(
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.green,
+            ),
+            onPressed: null),
+      ],
     );
   }
 }
