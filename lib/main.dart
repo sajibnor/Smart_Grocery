@@ -1,4 +1,4 @@
-import 'package:Smart_Grocery/screens/homePage.dart';
+import 'package:smart_grocery/screens/homePage.dart';
 import 'package:flutter/material.dart';
 import './screens/allCategories.dart';
 import 'package:flutter/services.dart';

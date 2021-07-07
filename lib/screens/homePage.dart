@@ -1,5 +1,5 @@
-import 'package:Smart_Grocery/screens/dealsTree.dart';
-import 'package:Smart_Grocery/screens/dealsTwo.dart';
+import 'package:smart_grocery/screens/dealsTree.dart';
+import 'package:smart_grocery/screens/dealsTwo.dart';
 import 'package:flutter/material.dart';
 import './allCategories.dart';
 import 'dealsOne.dart';
