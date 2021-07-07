@@ -1,3 +1,4 @@
+import 'package:Smart_Grocery/screens/homePage.dart';
 import 'package:flutter/material.dart';
 import './screens/allCategories.dart';
 import 'package:flutter/services.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xfffffff),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: HomePage(),
     );
   }
 }
@@ -35,13 +36,13 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.white.withOpacity(.5),
-      statusBarBrightness: Brightness.dark,
-    ));
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    //   statusBarColor: Colors.transparent,
+    //   statusBarColor: Colors.white.withOpacity(.5),
+    //   statusBarBrightness: Brightness.dark,
     // ));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+    ));
     // SystemChrome.setEnabledSystemUIOverlays([]);
 
     return Scaffold(
@@ -57,7 +58,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: BackButton(
               onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => Cetagoris())),
-            ))
+            )),
+            Center(
+                child: BackButton(
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => HomePage())),
+            )),
           ],
         ));
   }
