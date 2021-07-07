@@ -15,6 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'Smart Grocery',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        buttonColor: Color(0xff66DE93),
+        iconTheme: IconThemeData(
+          color: Color(0xff11BB10),
+        ),
+        backgroundColor: Color(0xfffffff),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
@@ -34,9 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
       statusBarColor: Colors.white.withOpacity(.5),
       statusBarBrightness: Brightness.dark,
     ));
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-    ));
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //   statusBarColor: Colors.transparent,
+    // ));
     // SystemChrome.setEnabledSystemUIOverlays([]);
 
     return Scaffold(
